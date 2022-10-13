@@ -5,7 +5,7 @@ We will be creating a program that addresses all these factors in choosing the p
 
 # Diagrams 
 ## ER Diagram
-![ER Diagram](ER Diagram_P1.png)
+![ER Diagram](ER_Diagram_P1.png)
 
 ## Relational Schema
 Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range)
