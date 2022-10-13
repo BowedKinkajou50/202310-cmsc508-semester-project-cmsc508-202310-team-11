@@ -7,7 +7,7 @@ We will be creating a program that addresses all these factors in choosing the p
 ![ER Diagram](ER_Diagram_P1.png)
 
 ## Relational Schema
-Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range)
+Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range, size, allergen, light, water)
 FK {climate} references {climate.zone} 
 
 Sender(sender_ID [PK], name, address)
@@ -23,7 +23,7 @@ Email(email_ID[PK], subject, date, body)
 Home(address[PK], temp, sunlight, pets, kids, frequency_at_home)
 
 ## Relational Model 
-Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range, size, allergen) 
+Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range, size, allergen, light, water) 
 FK {climate} references {climate.zone} 
 
 Sender(sender_ID [PK], name, address) 
