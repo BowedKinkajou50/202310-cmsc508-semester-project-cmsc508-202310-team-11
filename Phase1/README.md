@@ -25,7 +25,7 @@ Home(address[PK], temp, sunlight, pets, kids, frequency_at_home)
 ## Relational Model 
 
 ## Normalization
-###Functional Dependencies 
+### Functional Dependencies 
 
 ## 20 Queries 
 1. 
