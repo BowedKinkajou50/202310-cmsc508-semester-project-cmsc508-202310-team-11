@@ -23,6 +23,50 @@ Email(email_ID[PK], subject, date, body)
 Home(address[PK], temp, sunlight, pets, kids, frequency_at_home)
 
 ## Relational Model 
+Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range, size, allergen) 
+FK {climate} references {climate.zone} 
+
+Sender(sender_ID [PK], name, address) 
+
+Recipient(recipient_ID[PK], name, address, email)
+FK {address} references {home.address} 
+FK {email} references {Email.email_ID}
+
+Climate(zone[PK], state) 
+
+Email(email_ID[PK], subject, date, body)
+
+Home(address[PK], temp, sunlight, pets, kids, frequency_at_home) 
+
+Lives(Recipient[PK], Address[PK])
+FK {Recipient} references {Recipient.Recipient_ID} 
+FK {Address} references {home.address} 
+
+Gifting(Sender_ID[PK], recipient_ID[PK]) 
+FK {Sender_ID} references {Sender.Sender_ID} 
+FK {recipient_ID} references {Recipient.Recipient_ID} 
+
+Sell(Store_ID[PK],Plant_ID[PK]) 
+FK {Plant_ID} references {Plant.Plant_ID}
+FK {Store_ID} references {Store.Store_ID}
+
+Likes(Plant_ID[PK], Zone[PK]) 
+FK {Plant_ID} references {Plant.Plant_ID}
+FK {Zone} references {Climate.Zone} 
+
+In(Address[PK], Zone[PK])
+FK {Address} references {Home.Address}
+FK {Zone} references {Climate.Zone}
+
+Gets(Email ID[PK], Receiver_ID[PK])
+FK {Email_ID} references {Email.Email_ID} 
+FK {Receiver_ID} references {Receiver.Receiver_ID} 
+
+Match(Plant_ID[PK], Receiver_ID[PK], Allergy, Allergen) 
+FK {Receiver} references {Receiver.Receiver_ID} 
+FK {Allergy} references {Receiver.Allergy} 
+FK {Allergen} references {Plant.Allergen}
+FK {Plant_ID} references {Plant.Plant_ID} 
 
 ## Normalization
 ### Functional Dependencies 
