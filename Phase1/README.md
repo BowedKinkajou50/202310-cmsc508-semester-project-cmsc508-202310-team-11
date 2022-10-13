@@ -4,4 +4,5 @@ Finding the exceptional plant that is best suited for yourself or a loved one ca
 We will be creating a program that addresses all these factors in choosing the perfect plant for you and your household. We will ask a series of questions to determine the best species or options of plants that would work best for you or a friend. The program will filter through all the available options and take into account all the choices the user selects to give you options of suitable plants.
 
 # Diagrams 
-![ER Diagram](./ER Diagram_P1.png)
+![ER Diagram](ER Diagram_P1.png)
+
