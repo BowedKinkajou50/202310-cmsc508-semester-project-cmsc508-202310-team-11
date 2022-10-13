@@ -4,5 +4,23 @@ Finding the exceptional plant that is best suited for yourself or a loved one ca
 We will be creating a program that addresses all these factors in choosing the perfect plant for you and your household. We will ask a series of questions to determine the best species or options of plants that would work best for you or a friend. The program will filter through all the available options and take into account all the choices the user selects to give you options of suitable plants.
 
 # Diagrams 
-! [ER Diagram](ER Diagram_P1.png)
+## ER Diagram
+![ER Diagram](ER Diagram_P1.png)
 
+## Relational Schema
+Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range)
+FK {climate} references {climate.zone} 
+
+Sender(sender_ID [PK], name, address)
+
+Recipient(recipient_ID[PK], name, address, email)
+FK {address} references {home.address} 
+FK {email} references {Email.email_ID} 
+
+Climate(zone[PK], state) 
+
+Email(email_ID[PK], subject, date, body) 
+
+Home(address[PK], temp, sunlight, pets, kids, frequency_at_home)
+
+## Relational Model 
