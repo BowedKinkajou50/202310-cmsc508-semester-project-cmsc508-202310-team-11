@@ -94,3 +94,5 @@ FK {Plant_ID} references {Plant.Plant_ID}
 12. Display all stores that are online
 13. Display how frequent you should water for all common house
 14. Display all emails sent
+15. Display all recipients with kids and pet
+16. Display the names of all recipents who were gifted a cacti
