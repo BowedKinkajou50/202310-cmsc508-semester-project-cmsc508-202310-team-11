@@ -70,15 +70,15 @@ FK {Plant_ID} references {Plant.Plant_ID}
 
 ## Normalization
 ### Functional Dependencies 
-Plant_ID    Sender ID    Reciepient_ID    Email_ID    Address      Zone    Store ID
- A               B           C                D           E          F         G
-A -> C,F,G
-B -> C 
-C -> D, F 
-D -> C 
-E -> C, F 
-F -> E
-G-> A
+1. Plant_ID    Sender ID    Reciepient_ID    Email_ID    Address      Zone    Store ID
+2.  A               B           C                D           E          F         G
+3. A -> C,F,G
+4. B -> C 
+5. C -> D, F 
+6. D -> C 
+7. E -> C, F 
+8. F -> E
+9. G-> A
 ## 20 Queries 
 [See our data](https://docs.google.com/spreadsheets/d/1ZVhi1Yec7Qh7uCQ5f82go3bJfFGRzCk8H_Jlh6xIpe4/edit?usp=sharing) 
 1. 
