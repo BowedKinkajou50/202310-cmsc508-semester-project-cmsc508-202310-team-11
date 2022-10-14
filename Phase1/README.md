@@ -86,13 +86,13 @@ FK {Plant_ID} references {Plant.Plant_ID}
 4. Display a list of senders and their addresses 
 5. Display a list of green succulents
 6. Display a list of low cost plants <20$
-7. Display recipients in zone 2 and 4
-8. Display recipients in zone 5 and have kids
+7. Display the names of all recipients in zone 2 and 4
+8. Display the names of all recipients in zone 5 and have kids
 9. Display all plants that are not the color green
 10. Display plants with difficulty level below 5
 11. Display the homes with 70 temperature and below
 12. Display all stores that are online
 13. Display how frequent you should water for all common house
 14. Display all emails sent
-15. Display all recipients with kids and pet
+15. Display the names of all all recipients with kids and pet
 16. Display the names of all recipents who were gifted a cacti
