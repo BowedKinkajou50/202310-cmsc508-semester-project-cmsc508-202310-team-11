@@ -92,7 +92,11 @@ FK {Plant_ID} references {Plant.Plant_ID}
 10. Display plants with difficulty level below 5
 11. Display the homes with 70 temperature and below
 12. Display all stores that are online
-13. Display how frequent you should water for all common house
-14. Display all emails sent
+13. Display how frequent you should water for all common house plants 
+14. Display the subject of all emails sent
 15. Display the names of all all recipients with kids and pet
 16. Display the names of all recipents who were gifted a cacti
+17. Display the states of recipents with 2 or more kids 
+18. Display the name and plant ID of the plants that need indirect lighting 
+19. Display body of the emails sent between July 2022 and August 2022
+20. Display the names of plants that fall between 6-8 level of difficulty 
