@@ -80,4 +80,17 @@ FK {Plant_ID} references {Plant.Plant_ID}
 - G-> A
 ## 20 Queries 
 [See our data](https://docs.google.com/spreadsheets/d/1ZVhi1Yec7Qh7uCQ5f82go3bJfFGRzCk8H_Jlh6xIpe4/edit?usp=sharing) 
-1. 
+1. Display a list of recipients name and email
+2. Display a list of small plants
+3. Display a list of easy difficulty plants
+4. Display a list of senders and their addresses 
+5. Display a list of green succulents
+6. Display a list of low cost plants <20$
+7. Display recipients in zone 2 and 4
+8. Display recipients in zone 5 and have kids
+9. Display all plants that are not the color green
+10. Display plants with difficulty level below 5
+11. Display the homes with 70 temperature and below
+12. Display all stores that are online
+13. Display how frequent you should water for all common house
+14. Display all emails sent
