@@ -70,8 +70,7 @@ FK {Plant_ID} references {Plant.Plant_ID}
 
 ## Normalization
 ### Functional Dependencies 
-- Plant_ID    Sender ID    Reciepient_ID    Email_ID    Address      Zone    Store ID
--  A               B           C                D           E          F         G
+- Plant_ID (A),     Sender ID (B),    Reciepient_ID (C),   Email_ID (D),   Address (E),     Zone (F),   Store ID (G)
 - A -> C,F,G
 - B -> C 
 - C -> D, F 
