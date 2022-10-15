@@ -88,9 +88,9 @@ FK {Plant_ID} references {Plant.Plant_ID}
 6. Display a list of low cost plants <20$
 7. Display the names of all recipients in zone 2 and 4
 8. Display the names of all recipients in zone 5 and have kids
-9. Display all plants that are not the color green
-10. Display plants with difficulty level below 5
-11. Display the homes with 70 temperature and below
+9. Display names of plants that are not the color green
+10. Display names of plants with difficulty level below 5
+11. Display the address of homes with 70 degree temperature and below
 12. Display all stores that are online
 13. Display how frequent you should water for all common house plants 
 14. Display the subject of all emails sent
