@@ -4,7 +4,7 @@ Finding the exceptional plant that is best suited for yourself or a loved one ca
 We will be creating a program that addresses all these factors in choosing the perfect plant for you and your household. We will ask a series of questions to determine the best species or options of plants that would work best for you or a friend. The program will filter through all the available options and take into account all the choices the user selects to give you options of suitable plants.
 
 ## Entity-relationship Diagram
-![ER Diagram](ER_Diagram_P1.png)
+![ER Diagram](ERD_P1.jpeg)
 
 ## Relational Schema
 Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range, size, allergen, light, water)
