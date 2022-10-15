@@ -10,37 +10,37 @@ We will be creating a program that addresses all these factors in choosing the p
 Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range, size, allergen, light, water)
 FK {climate} references {climate.zone} 
 
-Sender(sender_ID [PK], name, address)
+Sender(sender_ID [PK], name, state)
 
-Recipient(recipient_ID[PK], name, address, email)
-FK {address} references {home.address} 
+Recipient(recipient_ID[PK], name, state, email)
+FK {state} references {home.state} 
 FK {email} references {Email.email_ID} 
 
 Climate(zone[PK], state) 
 
 Email(email_ID[PK], subject, date, body) 
 
-Home(address[PK], temp, sunlight, pets, kids, frequency_at_home)
+Home(state[PK], temp, sunlight, pets, kids, frequency_at_home)
 
 ## Relational Model 
 Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range, size, allergen, light, water) 
 FK {climate} references {climate.zone} 
 
-Sender(sender_ID [PK], name, address) 
+Sender(sender_ID [PK], name, state) 
 
-Recipient(recipient_ID[PK], name, address, email)
-FK {address} references {home.address} 
+Recipient(recipient_ID[PK], name, state, email)
+FK {state} references {home.state} 
 FK {email} references {Email.email_ID}
 
 Climate(zone[PK], state) 
 
 Email(email_ID[PK], subject, date, body)
 
-Home(address[PK], temp, sunlight, pets, kids, frequency_at_home) 
+Home(state[PK], temp, sunlight, pets, kids, frequency_at_home) 
 
-Lives(Recipient[PK], Address[PK])
+Lives(Recipient[PK], state[PK])
 FK {Recipient} references {Recipient.Recipient_ID} 
-FK {Address} references {home.address} 
+FK {state} references {home.state} 
 
 Gifting(Sender_ID[PK], recipient_ID[PK]) 
 FK {Sender_ID} references {Sender.Sender_ID} 
@@ -54,8 +54,8 @@ Likes(Plant_ID[PK], Zone[PK])
 FK {Plant_ID} references {Plant.Plant_ID}
 FK {Zone} references {Climate.Zone} 
 
-In(Address[PK], Zone[PK])
-FK {Address} references {Home.Address}
+In(state[PK], Zone[PK])
+FK {state} references {Home.state}
 FK {Zone} references {Climate.Zone}
 
 Gets(Email ID[PK], Receiver_ID[PK])
@@ -70,7 +70,7 @@ FK {Plant_ID} references {Plant.Plant_ID}
 
 ## Normalization
 ### Functional Dependencies 
-- Plant_ID (A),     Sender ID (B),    Reciepient_ID (C),   Email_ID (D),   Address (E),     Zone (F),   Store ID (G)
+- Plant_ID (A),     Sender ID (B),    Reciepient_ID (C),   Email_ID (D),   state (E),     Zone (F),   Store ID (G)
 - A -> C,F,G
 - B -> C 
 - C -> D, F 
@@ -83,14 +83,14 @@ FK {Plant_ID} references {Plant.Plant_ID}
 1. Display a list of recipients name and email
 2. Display a list of small plants
 3. Display a list of easy difficulty plants
-4. Display a list of senders and their addresses 
+4. Display a list of senders and their states 
 5. Display a list of green succulents
 6. Display a list of low cost plants <20$
 7. Display the names of all recipients in zone 2 and 4
 8. Display the names of all recipients in zone 5 and have kids
 9. Display names of plants that are not the color green
 10. Display names of plants with difficulty level below 5
-11. Display the address of homes with 70 degree temperature and below
+11. Display the states of homes with 70 degree temperature and below
 12. Display all stores that are online
 13. Display how frequent you should water for all common house plants 
 14. Display the subject of all emails sent
