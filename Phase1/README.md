@@ -79,7 +79,7 @@ FK {Plant_ID} references {Plant.Plant_ID}
 - F -> E
 - G-> A
 ## 20 Queries 
-[See our data](https://docs.google.com/spreadsheets/d/1ZVhi1Yec7Qh7uCQ5f82go3bJfFGRzCk8H_Jlh6xIpe4/edit?usp=sharing) 
+[See our sample data](https://docs.google.com/spreadsheets/d/1ZVhi1Yec7Qh7uCQ5f82go3bJfFGRzCk8H_Jlh6xIpe4/edit?usp=sharing) 
 1. Display a list of recipients name and email
 2. Display a list of small plants
 3. Display a list of easy difficulty plants
