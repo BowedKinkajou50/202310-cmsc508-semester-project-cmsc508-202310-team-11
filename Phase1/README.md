@@ -10,7 +10,7 @@ We will be creating a program that addresses all these factors in choosing the p
 Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range, size, allergen, light, water)
 FK {climate} references {climate.zone} 
 
-Sender(sender_ID [PK], name, state)
+Sender(sender_ID [PK], name)
 
 Recipient(recipient_ID[PK], name, state, email)
 FK {state} references {home.state} 
@@ -26,7 +26,7 @@ Home(state[PK], temp, sunlight, pets, kids, frequency_at_home)
 Plants(plant_ID [PK], name, species, color, climate, difficulty, price_Range, size, allergen, light, water) 
 FK {climate} references {climate.zone} 
 
-Sender(sender_ID [PK], name, state) 
+Sender(sender_ID [PK], name) 
 
 Recipient(recipient_ID[PK], name, state, email)
 FK {state} references {home.state} 
