@@ -15,7 +15,8 @@ We will be creating a program that addresses all these factors in choosing the p
 
 
 # Lessons Learned
-
+* Start project earlier
+* Have reoccurring meetings weekly/bi-weekly
 
 
 # How The Project Can Be Improved
