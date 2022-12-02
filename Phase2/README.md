@@ -12,3 +12,6 @@ We will be creating a program that addresses all these factors in choosing the p
 
 ## Entity-relationship Diagram
 ![ER Diagram](ERD_P1.jpeg)
+
+
+# Lessons Learned
