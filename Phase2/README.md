@@ -19,7 +19,8 @@ We will be creating a program that addresses all these factors in choosing the p
 * Have reoccurring meetings weekly/bi-weekly
 
 
-# How The Project Can Be Improved
+# How The Semester Project Can Be Improved
+* 
 
 
 # Web Application Link: 
