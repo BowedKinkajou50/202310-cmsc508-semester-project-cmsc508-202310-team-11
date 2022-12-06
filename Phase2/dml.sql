@@ -3,7 +3,7 @@
         recipients_first_name,
         email
     from 
-        recipents
+        recipients
     order by 
         recipients_first_name ASC
     ;
