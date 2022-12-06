@@ -3,8 +3,9 @@ drop table if exists recipients;
 drop table if exists homes;
 drop table if exists climate_zones;
 drop table if exists sender;
-drop table if exists store;
 drop table if EXISTS plants;
+drop table if exists store;
+
 
 CREATE table if not EXISTS sender(
     sender_id int AUTO_INCREMENT not NULL,
