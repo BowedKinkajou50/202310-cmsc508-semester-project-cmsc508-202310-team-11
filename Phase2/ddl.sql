@@ -199,3 +199,13 @@ VALUES
 (5, 'Lin', 1, 5, 'mlwick@acampadaparis.com')
 (6, 'Mohammud', 6, 4, 'gilmarsanteiro@cuendita.com')
 ;
+
+INSERT into emails(email_id, email_recpients_id, email_subject, date_reminder, email_body)
+VALUES
+(1, 1, 'Reminder', 3-23-2022)
+(2, 2, 'Plant Bought', 1-20-2022)
+(3, 3, 'Reminder', 2-17-2022)
+(4, 4, 'Reminder', 7-14-2022)
+(5, 5, 'Reminder', 8-4-2022)
+(6, 6, 'Reminder', 8-19-2022)
+;
