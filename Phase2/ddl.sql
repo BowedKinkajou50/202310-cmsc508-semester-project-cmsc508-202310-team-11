@@ -15,6 +15,8 @@ CREATE table if not EXISTS sender(
 
 CREATE table IF NOT EXISTS store(
     store_ID INT auto_increment not NULL,
+    store_name varchar(255),
+    store_link varchar(255),
     online boolean not null default false,
     primary key (store_ID)
 );
@@ -80,3 +82,21 @@ create table if not exists emails (
     primary key (email_id), 
     foreign key (email_recpients_id) references recipients(recipients_id)
 );
+
+INSERT into sender(sender_name)
+VALUES 
+('Angela'),
+('Helen'),
+('Julie'),
+('Owen'),
+('Evan'),
+('Evelyn');
+
+INSERT into store(online, store_name, store_link)
+VALUES
+(true,'lively root','https://www.livelyroot.com/'),
+(false,'plant house','https://www.planthouse.us/richmond-va'),
+(true,'stranges','https://www.stranges.com/'),
+(false,'',''),
+(true,'',''),
+(false,'','');
