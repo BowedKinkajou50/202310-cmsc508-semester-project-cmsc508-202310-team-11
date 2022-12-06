@@ -2,9 +2,9 @@ drop table if EXISTS Plants;
 drop table if exists store;
 drop table if exists sender;
 drop table if exists climate_zones;
-drop table if exists store;
 drop table if exists homes;
 drop table if exists recipients;
+drop table if exists emails;
 
 CREATE table if not EXISTS sender(
     sender_id int AUTO_INCREMENT not NULL,
@@ -33,12 +33,12 @@ create table if not EXISTS plants(
     store_ID int,
     primary key (plant_ID),
     foreign key (store_ID) references store(store_ID),
-    constraint CHK_plant check (plant_size in ('XS','S','M','L') and plant_warning in('pet safe','child safe' ,'poisonous sap','not pet safe ','not child safe' ,'safe (both pet and child)','pollen','dust',) )
+    constraint CHK_plant check (plant_size in ('XS','S','M','L') and plant_warning in('pet safe','child safe' ,'poisonous sap','not pet safe ','not child safe' ,'safe (both pet and child)','pollen','dust') )
 );
 
 
 CREATE table IF NOT EXISTS climate_zones(
-    climate_zone INT not NULL,
+    climate_zone VARCHAR(255) not NULL,
     zone_states VARCHAR(255) not null,
     primary key (climate_zone)
 );
@@ -49,7 +49,7 @@ CREATE TABLE if NOT EXISTS homes(
     state varchar(2) not null,
     avg_temperature int,
     sunlight VARCHAR(255) not null,
-    pets int non null default 0,
+    pets int NOT null default 0,
     kids int default 0,
     frequency int not null,
     primary key (home_id),
@@ -69,7 +69,7 @@ create table if not exists recipients(
 
 create table if not exists emails (
     email_id int auto_increment not null, 
-    email_recpients_id int auto_increment not null, 
+    email_recpients_id int not null, 
     email_subject VARCHAR(255), 
     date_reminder date not null, 
     email_body VARCHAR(255),
