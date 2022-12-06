@@ -39,9 +39,9 @@ create table if not EXISTS plants(
 
 
 CREATE table IF NOT EXISTS climate_zones(
-    climate_zone VARCHAR(255) not NULL,
-    zone_states VARCHAR(255) not null,
-    primary key (climate_zone)
+    climate_zone INT not NULL,
+    zone_state VARCHAR(255) not null,
+    primary key (zone_state)
 );
 
 
