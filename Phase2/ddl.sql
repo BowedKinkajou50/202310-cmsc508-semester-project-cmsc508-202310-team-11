@@ -59,7 +59,7 @@ CREATE TABLE if NOT EXISTS homes(
 create table if not exists recipients(
     recipients_id int auto_increment,
     recipients_first_name varchar(255) not null,
-    home_id int,
+    recipients_home_id int,
     email VARCHAR(255) not null,
     primary key (recipients_id),
     foreign key (home_id) references homes(home_id)
