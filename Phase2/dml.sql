@@ -90,7 +90,7 @@
     from 
         recipients
             join homes on (home_id = home_id)
-            join climate_zones on (state = zone_states)
+            join climate_zones on (state = zone_state)
     where
         kids > 0
         and
