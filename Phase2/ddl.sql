@@ -18,7 +18,7 @@ CREATE table IF NOT EXISTS store(
     primary key (store_ID)
 );
 
-create table if not EXISTS Plants(
+create table if not EXISTS plants(
     plant_ID int AUTO_INCREMENT not null,
     plant_name VARCHAR(255) not null,
     plant_species varchar(255) not null,
@@ -60,7 +60,19 @@ create table if not exists recipients(
     recipients_id int auto_increment,
     recipients_first_name varchar(255) not null,
     recipients_home_id int,
+    recipients_plant_id int, 
     email VARCHAR(255) not null,
     primary key (recipients_id),
-    foreign key (home_id) references homes(home_id)
+    foreign key (recipients_home_id) references homes(home_id),
+    foreign key (recipients_plant_id) references plants(plant_ID)
+);
+
+create table if not exists emails (
+    email_id int auto_increment not null, 
+    email_recpients_id int auto_increment not null, 
+    email_subject VARCHAR(255), 
+    date_reminder date not null, 
+    email_body VARCHAR(255),
+    primary key (email_id), 
+    foreign key (email_recpients_id) references recipients(recipients_id)
 );

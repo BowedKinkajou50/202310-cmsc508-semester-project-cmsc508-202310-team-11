@@ -14,7 +14,7 @@
         plant_ID, 
         plant_name
     from 
-        plant
+        plants
     where 
         plant_size = 'S'
     ; 
@@ -26,7 +26,7 @@
         plant_ID, 
         plant_name
     from 
-        plant
+        plants
     where 
         plant_difficulty = '3' 
         or 
@@ -76,7 +76,7 @@
     from 
         recipients
     where 
-        climate_zones = '2'
+        climate_zone = '2'
         AND
         climate_zone = '4'
     ;
@@ -117,13 +117,137 @@
         plant_difficulty < 5
     ;
     
--- Display the states of homes with 70 degree temperature and below
--- Display all stores that are online
--- Display how frequent you should water for all common house plants
--- Display the subject of all emails sent
--- Display the names of all all recipients with kids and pet
--- Display the names of all recipents who were gifted a cacti
--- Display the states of recipents with 2 or more kids
--- Display the name and plant ID of the plants that need indirect lighting
--- Display body of the emails sent between July 2022 and August 2022
--- Display the names of plants that fall between 6-8 level of difficulty
+-- 11. Display the states of homes with 70 degree temperature and below
+
+    select 
+        home_id,
+        states
+    from 
+        homes
+    where
+        avg_temperature <= '70'
+    order by 
+        avg_temperature ASC
+    ;
+
+-- 12. Display all stores that are online
+
+    select 
+        store_ID
+    from 
+        store
+    where 
+        online = 'true'
+    order by 
+        store_ID ASC
+    ;
+
+-- 13. Display how frequent you should water for all common house plants
+    
+    select 
+        plant_ID,
+        plant_name, 
+        plant_water
+    from 
+        plants
+    where
+        plant_species = 'common'
+    order by
+        plant_ID ASC
+    ;
+    
+
+-- 14. Display the subject of all emails sent
+
+    select 
+        email_id,
+        email_subject
+    from 
+        emails
+    order by  
+        email_id
+    ;
+
+-- 15. Display the names of all recipients with kids and pet
+
+    select
+        recipients_first_name
+    from 
+        recipients
+            join home on (home_id = recipients_home_id)
+    where 
+        pets != null
+        and 
+        kids != 0
+    ;
+
+-- 16. Display the names of all recipents who were gifted a cacti
+
+    select 
+        recipients_id,
+        recipients_first_name
+    from 
+        recipients
+            join plants (recipients_plant_id = plant_ID)
+    where 
+        plant_species = 'cacti'
+    order by 
+        recipients_id ASC
+    ;
+
+-- 17. Display the states of recipents with 2 or more kids
+
+    select
+        home_id,
+        state
+    from 
+        homes
+    where
+        kids >= 2
+    order by 
+        home_id ASC
+    ;
+
+-- 18. Display the name and plant ID of the plants that need indirect lighting
+
+    select 
+        plant_ID,
+        plant_name
+    from 
+        plants 
+    where
+        plant_light = 'indirect lighting'
+    order by 
+        plant_ID
+    ;
+
+-- 19. Display body of the emails sent between July 2022 and August 2022
+
+    select 
+        email_id, 
+        email_body
+    from 
+        emails
+    where 
+        date between #07/01/2022# to #08/01/2022#
+    order by 
+        date ASC
+    ;
+
+-- 20. Display the names of plants that fall between 6-8 level of difficulty
+
+    select
+        plant_ID,
+        plant_name, 
+        plant_difficulty
+    from
+        plants
+    where 
+        plant_difficulty = '6'
+        or 
+        plant_difficulty = '7'
+        or 
+        plant_difficulty = '8'
+    order by
+        plant_difficulty ASC
+    ;
