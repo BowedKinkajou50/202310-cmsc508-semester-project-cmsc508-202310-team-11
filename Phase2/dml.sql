@@ -76,10 +76,10 @@
     from 
         recipients
             join homes on (home_id = recipients_home_id)
-            join climate_zones on (zone_states = state)
+            join climate_zones on (zone_state = state)
     where 
         climate_zone = '2'
-        AND
+        and
         climate_zone = '4'
     ;
 
