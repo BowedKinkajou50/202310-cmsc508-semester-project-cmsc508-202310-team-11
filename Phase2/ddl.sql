@@ -34,8 +34,11 @@ create table if not EXISTS plants(
     store_ID int,
     primary key (plant_ID),
     foreign key (store_ID) references store(store_ID),
-    constraint CHK_plant check (plant_size in ('XS','S','M','L') and plant_warning in('pet safe','child safe' ,'poisonous sap','not pet safe ','not child safe' ,'safe (both pet and child)','pollen','dust') )
+    constraint CHK_plant check (plant_size in ('XS','S','M','L') 
+        and plant_warning in('pet safe','child safe' ,'poisonous sap','not pet safe ','not child safe' ,'safe (both pet and child)','pollen','dust') 
+        and plant_species in ('cacti', 'fern', 'palm', 'flowering', 'succulent', 'common house'))
 );
+
 
 
 CREATE table IF NOT EXISTS climate_zones(

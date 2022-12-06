@@ -3,7 +3,7 @@
         recipients_first_name,
         email
     from 
-        recipients
+        recipents
     order by 
         recipients_first_name ASC
     ;
@@ -75,6 +75,8 @@
         recipients_first_name
     from 
         recipients
+            join homes on (home_id = recipients_home_id)
+            join climate_zones on (zone_states = state)
     where 
         climate_zone = '2'
         AND
@@ -121,7 +123,7 @@
 
     select 
         home_id,
-        states
+        state
     from 
         homes
     where
@@ -174,7 +176,7 @@
         recipients_first_name
     from 
         recipients
-            join home on (home_id = recipients_home_id)
+            join homes on (home_id = recipients_home_id)
     where 
         pets != null
         and 
@@ -188,7 +190,7 @@
         recipients_first_name
     from 
         recipients
-            join plants (recipients_plant_id = plant_ID)
+            join plants on (plant_ID = recipients_plant_id)
     where 
         plant_species = 'cacti'
     order by 
@@ -229,9 +231,9 @@
     from 
         emails
     where 
-        date between #07/01/2022# to #08/01/2022#
-    order by 
-        date ASC
+        date_reminder between '2022-07-01' and '2022-08-01'
+    order by
+        date_reminder DESC
     ;
 
 -- 20. Display the names of plants that fall between 6-8 level of difficulty
