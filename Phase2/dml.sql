@@ -178,7 +178,7 @@
         recipients
             join homes on (home_id = recipients_home_id)
     where 
-        pets != null
+        pets != 0
         and 
         kids != 0
     ;
