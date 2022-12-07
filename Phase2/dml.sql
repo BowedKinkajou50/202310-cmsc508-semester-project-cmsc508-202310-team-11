@@ -101,8 +101,7 @@
 
     select 
         plant_ID, 
-        plant_name,
-        plant_color
+        plant_name
     from 
         plants
     where 
@@ -193,7 +192,7 @@
         recipients
             join plants on (plant_ID = recipients_plant_id)
     where 
-        plant_species = 'cacti'
+        plant_species = 'Cacti'
     order by 
         recipients_id ASC
     ;
@@ -219,7 +218,7 @@
     from 
         plants 
     where
-        plant_light = 'indirect lighting'
+        plant_light = 'indirect'
     order by 
         plant_ID
     ;
