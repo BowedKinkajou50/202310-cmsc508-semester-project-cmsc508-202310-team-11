@@ -101,7 +101,8 @@
 
     select 
         plant_ID, 
-        plant_name
+        plant_name,
+        plant_color
     from 
         plants
     where 
