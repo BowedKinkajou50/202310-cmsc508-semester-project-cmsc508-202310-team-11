@@ -114,7 +114,7 @@ VALUES
 (9, 'Delphinum', 'Flowering', 'Blue', '4,5,6,7', 7, 'direct', 1, '$$', 'L', 'Not Pet Safe + Not Child Safe', 4),
 (10, 'Staghorn Fern', 'Fern', 'Purple', '1,2,3', 8, 'indirect', 1, '$', 'M', 'Safe', 3),
 (11, 'Alocasia', 'Common House', 'Purple', '2,3,4', 5, 'indirect', 1, '$$', 'L', 'Not Pet Safe + Not Child Safe', 4),
-(12, 'Monstera', 'Common House', 'Freen', '1,2,3,4', 3, 'indirect', 2, '$$', 'L', 'Not Pet Safe + Not Child Safe + Poisonous Sap', 6),
+(12, 'Monstera', 'Common House', 'Green', '1,2,3,4', 3, 'indirect', 2, '$$', 'L', 'Not Pet Safe + Not Child Safe + Poisonous Sap', 6),
 (13, 'Philodendron Pathos', 'Common House', 'Green', '1,2,3', 2, 'indirect', 2, '$$', 'M', 'Not Pet Safe + Not Child Safe', 5),
 (14, 'Fiddle Leaf Fig', 'Common House', 'Green', '1,2,3', 7, 'direct', 1, '$$', 'L', 'Not Pet Safe + Not Child Safe + Poisonous Sap', 4),
 (15, 'Pilea Pepermoidies', 'Common House', 'Green', '1,2,3,4', 4, 'indirect', 1, '$', 'M', 'Allergies', 6)
