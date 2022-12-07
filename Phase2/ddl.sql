@@ -95,12 +95,12 @@ VALUES
 
 INSERT into store(online, store_name, store_link)
 VALUES
-(true,'lively root','https://www.livelyroot.com/'),
-(false,'plant house','https://www.planthouse.us/richmond-va'),
-(true,'stranges','https://www.stranges.com/'),
-(false,'',''),
-(true,'',''),
-(false,'','');
+(true,'Lively Root','https://www.livelyroot.com/'),
+(false,'Plant house','https://www.planthouse.us/richmond-va'),
+(true,'Stranges','https://www.stranges.com/'),
+(false,'Plant Vines','https://www.plantvine.com/'),
+(true,'Hey Rooted','https://heyrooted.com/'),
+(false,'Gardyn','https://mygardyn.com/');
 
 INSERT into plants(plant_ID, plant_name, plant_species, plant_color, plant_climate_zone, plant_difficulty, plant_light, plant_water, plant_price_range, plant_size, plant_warning, store_ID)
 VALUES
