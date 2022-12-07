@@ -89,11 +89,11 @@
         recipients_first_name
     from 
         recipients
-            join homes on (home_id = home_id)
+            join homes on (recipients_home_id = home_id)
             join climate_zones on (state = zone_state)
     where
         kids > 0
-        and
+        and 
         climate_zone = '5'
     ;
 
