@@ -1,4 +1,4 @@
--- 1. Display a list of recipients name and email
+--  1. Display a list of recipients name and email
     select 
         recipients_first_name,
         email
@@ -79,7 +79,7 @@
             join climate_zones on (zone_state = state)
     where 
         climate_zone = '2'
-        and
+        OR
         climate_zone = '4'
     ;
 
@@ -93,7 +93,7 @@
             join climate_zones on (state = zone_state)
     where
         kids > 0
-        and 
+        and
         climate_zone = '5'
     ;
 
@@ -101,8 +101,7 @@
 
     select 
         plant_ID, 
-        plant_name,
-        plant_color
+        plant_name
     from 
         plants
     where 
@@ -154,7 +153,7 @@
     from 
         plants
     where
-        plant_species = 'common'
+        plant_species = 'common house'
     order by
         plant_ID ASC
     ;
