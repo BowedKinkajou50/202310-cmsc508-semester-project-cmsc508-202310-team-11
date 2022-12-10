@@ -1,0 +1,37 @@
+h1{
+    text-align: center;
+}
+.fcc-btn {
+    background-color: #4CAF50;
+    text-decoration: none;
+    color: white;
+    padding: 20px 25px 20px 25px;
+    margin-top: 8px;
+    border-radius: 4px;
+    border-color: black;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .fcc-btn:hover{
+    background-color: #45a049;
+  }
+  .fcc-btn2 {
+    background-color: #4CAF50;
+    text-decoration: none;
+    color: white;
+    padding: 20px 43px 20px 43px;
+    margin-top: 8px;
+    border-radius: 4px;
+    border-color: black;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .fcc-btn2:hover{
+    background-color: #45a049;
+  }
+  a{
+    text-align: center;
+  }
+  .but{
+    text-align: center;
+  }
