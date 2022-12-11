@@ -56,7 +56,7 @@ else{
 
                 $_SESSION['login_id'] = $row['login_id'];
                     if($row['username'] === $uname && $uname = 'manager')
-                        header("Location: catalog.php");
+                        header("Location: admin_menu.php");
                         exit();
                 header("Location: home.php");
 
