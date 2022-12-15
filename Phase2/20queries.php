@@ -361,7 +361,7 @@ td, th {
     <h3>select <br>
     &nbsp;&nbsp;recipients_id, <br>
     &nbsp;&nbsp;recipients_first_name <br> 
-    from 
+    from <br>
     &nbsp;&nbsp;recipients <br>
     &nbsp;&nbsp;&nbsp;&nbsp;join homes on (recipients_home_id = home_id) <br>
     where <br>
@@ -381,6 +381,510 @@ td, th {
         <tr>
             <td>5</td>
             <td>Lin</td>            
+        </tr>
+    </table>
+</div>
+
+<div id="flip5"><h2>Query 5: Display a list of green succulents</h2></div>
+<div id="panel5">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;plant_ID, <br>
+    &nbsp;&nbsp;plant_name <br> 
+    from <br>
+    &nbsp;&nbsp;plants <br>
+    where <br>
+    &nbsp;&nbsp;plant_color= 'Green' <br>
+    &nbsp;&nbsp;AND <br>
+    &nbsp;&nbsp;plant_species = 'Succulent' <br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Plant ID</th>
+            <th>Plant Name</th>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jade</td>            
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Burros Tail</td>            
+        </tr>
+    </table>
+</div>
+
+<div id="flip6"><h2>Query 6: Display a list of low cost plants < 20$</h2></div>
+<div id="panel6">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;plant_ID, <br>
+    &nbsp;&nbsp;plant_name <br> 
+    from <br>
+    &nbsp;&nbsp;plants <br>
+    where <br>
+    &nbsp;&nbsp;plant_price_range = '$' <br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Plant ID</th>
+            <th>Plant Name</th>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ferocactus</td>            
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jade</td>            
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Burros Tail</td>            
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Parlor Palm</td>            
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>African Violet</td>            
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Staghorn Fern</td>            
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Pilea Pepermoidies</td>            
+        </tr>
+    </table>
+</div>
+
+<div id="flip7"><h2>Query 7: Display the names of all recipients in zone 2 and 4</h2></div>
+<div id="panel7">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;recipients_first_name <br>
+    from <br>
+    &nbsp;&nbsp;recipients <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;join homes on (home_id = recipients_home_id) <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;join climate_zones on (zone_state = state)<br>
+    where <br>
+    &nbsp;&nbsp;climate_zone = '2' <br>
+    &nbsp;&nbsp;or <br>
+    &nbsp;&nbsp;climate_zone = '4' <br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Recipients First Name</th>
+        </tr>
+        <tr>
+            <td>Annie</td>           
+        </tr>
+        <tr>
+            <td>Lin</td>           
+        </tr>
+        <tr>
+            <td>Cena</td>           
+        </tr>
+    </table>
+</div>
+
+<div id="flip8"><h2>Query 8: Display the names of all recipients in zone 5 and have kids</h2></div>
+<div id="panel8">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;recipients_first_name <br>
+    from <br>
+    &nbsp;&nbsp;recipients <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;join homes on (home_id = recipients_home_id) <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;join climate_zones on (zone_state = state)<br>
+    where <br>
+    &nbsp;&nbsp;kids > 0 <br>
+    &nbsp;&nbsp;and <br>
+    &nbsp;&nbsp;climate_zone = '5' <br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Recipients First Name</th>
+        </tr>
+        <tr>
+            <td>Mohammund</td>           
+        </tr>
+    </table>
+</div>
+
+<div id="flip9"><h2>Query 9: Display names of plants that are not the color green</h2></div>
+<div id="panel9">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;plant_ID <br>
+    &nbsp;&nbsp;plant_name <br>
+    &nbsp;&nbsp;plant_color <br>
+    from <br>
+    &nbsp;&nbsp;plants <br>
+    where <br>
+    &nbsp;&nbsp;plant_color != 'Green'<br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Plant ID</th>
+            <th>Plant Name</th>
+            <th>Plant Color</th>
+        </tr>
+        <tr>
+            <td>7</td>  
+            <td>African Violet</td>      
+            <td>Purple</td>       
+        </tr>
+        <tr>
+            <td>7</td>  
+            <td>African Violet</td>      
+            <td>Purple</td>       
+        </tr>
+        <tr>
+            <td>8</td>  
+            <td>Pink Anthurium</td>      
+            <td>Pink</td>       
+        </tr>
+        <tr>
+            <td>9</td>  
+            <td>Delphinum</td>      
+            <td>Blue</td>       
+        </tr>
+        <tr>
+            <td>10</td>  
+            <td>Staghorn Fern</td>      
+            <td>Purple</td>       
+        </tr>
+        <tr>
+            <td>11</td>  
+            <td>Alocasia</td>      
+            <td>Purple</td>       
+        </tr>
+    </table>
+</div>
+
+<div id="flip10"><h2>Query 10: Display names of plants with difficulty level below 5</h2></div>
+<div id="panel10">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;plant_ID <br>
+    &nbsp;&nbsp;plant_name <br>
+    from <br>
+    &nbsp;&nbsp;plants <br>
+    where <br>
+    &nbsp;&nbsp;plant_difficulty < 5<br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Plant ID</th>
+            <th>Plant Name</th>
+        </tr>
+        <tr>
+            <td>2</td>  
+            <td>Ferocactus</td>          
+        </tr>
+        <tr>
+            <td>3</td>  
+            <td>Jade</td>             
+        </tr>
+        <tr>
+            <td>5</td>  
+            <td>Parlor Palm</td>            
+        </tr>
+        <tr>
+            <td>8</td>  
+            <td>Pink Anthurium</td>           
+        </tr>
+        <tr>
+            <td>12</td>  
+            <td>Monstera</td>           
+        </tr>
+        <tr>
+            <td>13</td>  
+            <td>Philodendron Pathos</td>            
+        </tr>
+        <tr>
+            <td>15</td>  
+            <td>Pilea Pepermoidies</td>           
+        </tr>
+    </table>
+</div>
+
+<div id="flip11"><h2>Query 11: Display the states of homes with 70 degree temperature and below</h2></div>
+<div id="panel11">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;home_ID <br>
+    &nbsp;&nbsp;state<br>
+    from <br>
+    &nbsp;&nbsp;homes <br>
+    where <br>
+    &nbsp;&nbsp; avg_temperature <= '70'<br>
+    order by <br>
+    &nbsp;&nbsp; avg_temperature ASC<br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Home ID</th>
+            <th>State</th>
+        </tr>
+        <tr>
+            <td>2</td>  
+            <td>MA</td>          
+        </tr>
+        <tr>
+            <td>6</td>  
+            <td>NV</td>             
+        </tr>
+        <tr>
+            <td>5</td>  
+            <td>CO</td>            
+        </tr>
+        <tr>
+            <td>3</td>  
+            <td>MD</td>           
+        </tr>
+    </table>
+</div>
+
+<div id="flip12"><h2>Query 12: Display all stores that are online</h2></div>
+<div id="panel12">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;store_ID <br>
+    from <br>
+    &nbsp;&nbsp;store <br>
+    where <br>
+    &nbsp;&nbsp;online = 'true'<br>
+    order by <br>
+    &nbsp;&nbsp;store_ID ASC<br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Store ID</th>
+        </tr>
+        <tr>
+            <td>2</td>          
+        </tr>
+        <tr>
+            <td>4</td>             
+        </tr>
+        <tr>
+            <td>6</td>            
+        </tr>
+        <tr>
+            <td>13</td>           
+        </tr>
+    </table>
+</div>
+
+<div id="flip13"><h2>Query 13: Display how frequent you should water for all common house plants</h2></div>
+<div id="panel13">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;store_ID <br>
+    &nbsp;&nbsp;plant_name <br>
+    &nbsp;&nbsp;plant_water <br>
+    from <br>
+    &nbsp;&nbsp;plants<br>
+    where <br>
+    &nbsp;&nbsp;plant_species = 'common house'<br>
+    order by <br>
+    &nbsp;&nbsp;plant_ID ASC<br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Plant ID</th>
+            <th>Plant Name</th>
+            <th>Plant Water</th>
+        </tr>
+        <tr>
+            <td>11</td>    
+            <td>Alocasia</td>  
+            <td>1</td>        
+        </tr>
+        <tr>
+            <td>12</td>    
+            <td>Monstera</td>  
+            <td>2</td>             
+        </tr>
+        <tr>
+            <td>13</td>    
+            <td>Philodendron Pathos</td>  
+            <td>2</td>             
+        </tr>
+        <tr>
+            <td>14</td>    
+            <td>Fiddle Leaf Fig</td>  
+            <td>1</td>            
+        </tr>
+        <tr>
+            <td>15</td>    
+            <td>Pilea Pepermoidies</td>  
+            <td>1</td>            
+        </tr>
+    </table>
+</div>
+
+<div id="flip14"><h2>Query 14: Display the subject of all emails sent</h2></div>
+<div id="panel14">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;email_ID <br>
+    &nbsp;&nbsp;email_subject <br>
+    from <br>
+    &nbsp;&nbsp;emails<br>
+    order by <br>
+    &nbsp;&nbsp;email_id<br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Email ID</th>
+            <th>Email Subject</th>
+        </tr>
+        <tr>
+            <td>1</td>    
+            <td>Reminder</td>          
+        </tr>
+        <tr>
+            <td>2</td>    
+            <td>Plant Bought</td>           
+        </tr>
+        <tr>
+            <td>3</td>    
+            <td>Reminder</td>              
+        </tr>
+        <tr>
+            <td>4</td>    
+            <td>Reminder</td>               
+        </tr>
+        <tr>
+            <td>5</td>    
+            <td>Reminder</td>               
+        </tr>
+        <tr>
+            <td>6</td>    
+            <td>Reminder</td>                
+        </tr>
+    </table>
+</div>
+
+<div id="flip15"><h2>Query 15: Display the names of all recipients with kids and pet</h2></div>
+<div id="panel15">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;recipients_first_name <br>
+    from <br>
+    &nbsp;&nbsp;recipients<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;join homes on (home_id = recipients_home_id)<br>
+    where <br>
+    &nbsp;&nbsp;pets != 0<br>
+    &nbsp;&nbsp;and<br>
+    &nbsp;&nbsp;kids != 0<br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Recipients First Name</th>
+        </tr>
+        <tr>
+            <td>Annie</td>            
+        </tr>
+        <tr>
+            <td>Lin</td>                
+        </tr>
+        <tr>
+            <td>Mateo</td>                 
+        </tr>
+        <tr>
+            <td>Mohammud</td>               
+        </tr>
+    </table>
+</div>
+
+<div id="flip16"><h2>Query 16: Display the names of all recipents who were gifted a cacti</h2></div>
+<div id="panel16">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;recipients_ID <br>
+    &nbsp;&nbsp;recipients_first_name<br>
+    from <br>
+    &nbsp;&nbsp;recipients<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;join plants on (plant_ID = recipients_plant_id)<br>
+    where <br>
+    &nbsp;&nbsp;plant_species = 'Cacti'<br>
+    order by <br>
+    &nbsp;&nbsp;recipients_id ASC<br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Recipients ID</th>
+            <th>Recipients First Name</th>
+        </tr>
+        <tr>
+            <td>No Data</td>    
+            <td>No Data</td>        
+        </tr>
+    </table>
+</div>
+
+<div id="flip17"><h2>Query 17: Display the states of recipents with 2 or more kids</h2></div>
+<div id="panel17">
+    <h2>SQL Code: </h2>
+    <h3>select <br>
+    &nbsp;&nbsp;home_ID <br>
+    &nbsp;&nbsp;state <br>
+    from <br>
+    &nbsp;&nbsp;homes<br>
+    where <br>
+    &nbsp;&nbsp;kids >= 2<br>
+    order by <br>
+    &nbsp;&nbsp;home_id ASC<br>
+    ;
+    </h3>
+    <h2>Results: </h2>
+    <table>
+        <tr>
+            <th>Home ID</th>
+            <th>State</th>
+        </tr>
+        <tr>
+            <td>1</td>    
+            <td>VA</td>        
+        </tr>
+        <tr>
+            <td>5</td>    
+            <td>CO</td>            
+        </tr>
+        <tr>
+            <td>6</td>    
+            <td>NV</td>             
         </tr>
     </table>
 </div>
