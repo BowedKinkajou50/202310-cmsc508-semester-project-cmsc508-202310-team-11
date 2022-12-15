@@ -30,6 +30,6 @@ We will be creating a program that addresses all these factors in choosing the p
 Admin Log in  | User Log in
 ------------- | -------------
 User: manager | User: plantlover123
-Pass: spring 2022 | Pass: iloveplants
+Pass: spring2022 | Pass: iloveplants
 
 # Presentation Video Link:
