@@ -25,4 +25,9 @@ We will be creating a program that addresses all these factors in choosing the p
 # Web Application Link: 
 [https://www.cmsc508.com/202310/team11/PlantApp/](https://www.cmsc508.com/202310/team11/PlantApp/)
 
+Admin Log in  | User Log in
+------------- | -------------
+User: manager | User: plantlover
+Pass: spring 2022 | Pass: iloveplants
+
 # Presentation Video Link:
