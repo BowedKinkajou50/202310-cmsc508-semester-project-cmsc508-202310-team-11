@@ -22,7 +22,7 @@ We will be creating a program that addresses all these factors in choosing the p
 # How The Semester Project Can Be Improved
 * More emphasis on working on project
 * More designated times to work on project as a team
-* 
+* Contact professor more often for help
 
 # Web Application Link: 
 [https://www.cmsc508.com/202310/team11/PlantApp/](https://www.cmsc508.com/202310/team11/PlantApp/)
