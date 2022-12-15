@@ -23,6 +23,6 @@ We will be creating a program that addresses all these factors in choosing the p
 * 
 
 # Web Application Link: 
-![https://www.cmsc508.com/202310/team11/PlantApp/](https://www.cmsc508.com/202310/team11/PlantApp/)
+[https://www.cmsc508.com/202310/team11/PlantApp/](https://www.cmsc508.com/202310/team11/PlantApp/)
 
 # Presentation Video Link:
