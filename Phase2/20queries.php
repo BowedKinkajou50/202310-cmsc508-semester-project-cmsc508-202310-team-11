@@ -222,8 +222,8 @@ h3 {
   padding: 5px;
   display: none;
   text-align:left;
+  margin: 10px;
 }
-
 
 table {
   border-collapse: collapse;
@@ -240,7 +240,7 @@ td, th {
 </head>
 
 <body> 
-<h1> Here are our 20 queries from Phase 1 on our Sample data</h1> 
+<h1> Here are our 20 queries from Phase 1 based on the sample data</h1> 
 
 <div id="flip"><h2>Query 1: Display a list of recipients name and email</h2></div>
 <div id="panel">
