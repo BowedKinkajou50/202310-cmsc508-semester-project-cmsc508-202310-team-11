@@ -20,6 +20,8 @@ We will be creating a program that addresses all these factors in choosing the p
 * It was good to come up with tasks to have done by the next meeting
 
 # How The Semester Project Can Be Improved
+* More emphasis on working on project
+* More designated times to work on project as a team
 * 
 
 # Web Application Link: 
