@@ -20,20 +20,12 @@ session_start()
 
         <center>
 
-        <h1>Enter the ID of the plant:</h1> 
-        <form method="get" action="results.php">
-            <div class="name">
-            <label for="fname">Plant ID:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-        </div>
-        <br><br><br>
-
 
         <h1>Enter the name of the plant:</h1> 
         <form method="get" action="results.php">
             <div class="name">
-            <label for="fname">Plant name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
+            <label for="plantName">Plant name:</label><br>
+            <input type="text" id="plantName" name="plantName"><br>
         </div>
 
         <br><br><br>
@@ -94,8 +86,8 @@ session_start()
             <h1>Enter the color of the plant:</h1> 
         <form method="get" action="results.php">
             <div class="name">
-            <label for="fname">Plant color:</label><br>
-            <input type="text" id="fname" name="fname"><br>
+            <label for="color">Plant color:</label><br>
+            <input type="text" id="color" name="color"><br>
         </div>
 
         <br><br><br>
@@ -289,7 +281,7 @@ session_start()
 
 
 
-        <a href = 'results.php'>
+        <a href = 'admin_menu.php'>
     <input type="submit" value="Enter The Plant"/>
 </a>
 </form>
@@ -303,4 +295,3 @@ session_start()
         </main>
   </body>
 </html>
-
