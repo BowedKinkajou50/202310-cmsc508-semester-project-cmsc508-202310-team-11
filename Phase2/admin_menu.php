@@ -37,11 +37,15 @@ h1{
 <body>
     <div class="buttons">
         <h1>Adminstrative Menu</h1>
+        <a href="addplant.php">
         <button class="btn add">Add Plant</button><br>
         <button class="btn update">Update Plant</button><br>
         <button class="btn delete">Delete Plant</button><br>
+        <a href="20queries.php">
+        <button class="btn delete">View 20 Queries</button><br>
         <a href="catalog.php">
             <button class="btn viewplants">View Plant</button>
+
     </div>
 </body>
 

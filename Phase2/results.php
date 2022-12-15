@@ -12,16 +12,26 @@ $plantSize = $_GET['size'];
 $cost = $_GET['cost'];
 $difficulty = $_GET['diffuculty'];
 
-$sql = "SELECT * FROM plants WHERE plant_id = 2";
+$sql = "SELECT * FROM plants left join store on plants.store_ID = store.store_ID WHERE plant_size = ''+$size + '';";
 $result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+$species = $row['plant_species'];
+$color = $row['plant_color'];
+$climate_zone = $row['plant_climate_zone'];
+$diffuclty = $row['plant_difficulty'];
+$lighting = $row['plant_light'];
+$water = $row['plant_water'];
+$price = $row['plant_price_range'];
+$size = $row['plant_size'];
+$warning = $row['plant_warning'];
+$store = $row['store_link'];
+$plant_name = $row['plant_name'];
+$plant_water = $row['plant_water'];
 if (!$result) {
     echo 'Could not run query: ' . mysql_error();
     exit;
 }
 $row = mysqli_fetch_row($result);
-echo $state;
-echo $row[0]; 
-echo $row[1]; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,37 +53,63 @@ echo $row[1];
         <div class="title">Plant 3</div>
             
         <div class = "sec">
-            <h2>Name: <?php echo $state; ?> </h2>
-            <h2>Color: </h2>
-            <h2>Size: </h2>
-            <h2>Price: </h2>
-            <h2>Water Frequency: </h2>
-            <h2>Warnings: </h2>
-            <h2>Description: </h2>  
+            <h2>Name: <?php echo $plant_name; ?> </h2>
+            <h2>Color:<?php echo $color; ?> </h2>
+            <h2>Size: <?php echo $size; ?></h2>
+            <h2>Price:<?php echo $price; ?> </h2>
+            <h2>Water Frequency: <?php echo $plant_water; ?></h2>
+            <h2>Warnings: <?php echo $warning; ?></h2>
+            <h2>Store: <?php echo $store; ?></h2>  
         </div>
-            
-        
-            
+        <?php
+$row = mysqli_fetch_assoc($result);
+$species = $row['plant_species'];
+$color = $row['plant_color'];
+$climate_zone = $row['plant_climate_zone'];
+$diffuclty = $row['plant_difficulty'];
+$lighting = $row['plant_light'];
+$water = $row['plant_water'];
+$price = $row['plant_price_range'];
+$size = $row['plant_size'];
+$warning = $row['plant_warning'];
+$store = $row['store_link'];
+$plant_name = $row['plant_name'];
+$plant_water = $row['plant_water'];
+?>
         <div class = "sec">
-            <h2>Name: </h2>
-            <h2>Color: </h2>
-            <h2>Size: </h2>
-            <h2>Price: </h2>
-            <h2>Water Frequency: </h2>
-            <h2>Warnings: </h2>
-            <h2>Description: </h2>
+        <h2>Name: <?php echo $plant_name; ?> </h2>
+            <h2>Color:<?php echo $color; ?> </h2>
+            <h2>Size: <?php echo $size; ?></h2>
+            <h2>Price:<?php echo $price; ?> </h2>
+            <h2>Water Frequency: <?php echo $plant_water; ?></h2>
+            <h2>Warnings: <?php echo $warning; ?></h2> 
+            <h2>Store: <?php echo $store; ?></h2>  
         </div> 
             
+        <?php
         
-            
+$row = mysqli_fetch_assoc($result);
+$species = $row['plant_species'];
+$color = $row['plant_color'];
+$climate_zone = $row['plant_climate_zone'];
+$diffuclty = $row['plant_difficulty'];
+$lighting = $row['plant_light'];
+$water = $row['plant_water'];
+$price = $row['plant_price_range'];
+$size = $row['plant_size'];
+$warning = $row['plant_warning'];
+$store = $row['store_link'];
+$plant_name = $row['plant_name'];
+$plant_water = $row['plant_water'];
+?>
         <div class = "sec">
-            <h2>Name: </h2>
-            <h2>Color: </h2>
-            <h2>Size: </h2>
-            <h2>Price: </h2>
-            <h2>Water Frequency: </h2>
-            <h2>Warnings: </h2>
-            <h2>Description: </h2>
+        <h2>Name: <?php echo $plant_name; ?> </h2>
+            <h2>Color:<?php echo $color; ?> </h2>
+            <h2>Size: <?php echo $size; ?></h2>
+            <h2>Price:<?php echo $price; ?> </h2>
+            <h2>Water Frequency: <?php echo $plant_water; ?></h2>
+            <h2>Warnings: <?php echo $warning; ?></h2> 
+            <h2>Store: <?php echo $store; ?></h2>  
         </div>
 
         </div>

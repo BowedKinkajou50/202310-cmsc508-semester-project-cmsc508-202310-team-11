@@ -271,10 +271,10 @@ session_start()
 
 
    <h1>Enter the url for the store:</h1> 
-        <form method="get" action="results.php">
+        <form method="get" action="catalog.php">
             <div class="name">
-            <label for="fname">Store url:</label><br>
-            <input type="text" id="fname" name="fname"><br>
+            <label for="store">Store url:</label><br>
+            <input type="text" id="store" name="store"><br>
         </div>
 
         <br><br><br>

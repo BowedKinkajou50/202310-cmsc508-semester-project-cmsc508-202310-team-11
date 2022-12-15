@@ -1,297 +1,556 @@
-<?php
-session_start()
+<?php 
+
+session_start(); 
+
+include "DBConnection.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="./addplantstyle.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-        <h3>Please enter some data to create a new plant.</h3>  
-        <br>
-        <br>
+<!doctype html>
+<html>
 
-        <center>
+<head>
+<style> 
+
+div.container{
+    text-align: center;
+    display:block;
+    margin: 0 auto; 
+    width: 75%;
+}
+
+div.gallery {
+    margin: 8px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 250px;
+}
+  
+div.gallery:hover {
+    border: 1.5px solid #777;
+}
+  
+div.gallery img {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: contain;
+}
+  
+desc {
+    padding: 15px;
+    text-align: center;
+}
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: padding-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 20px; 
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+h3 {
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #000000;
+}
 
 
-        <h1>Enter the name of the plant:</h1> 
-        <form method="get" action="results.php">
-            <div class="name">
-            <label for="plantName">Plant name:</label><br>
-            <input type="text" id="plantName" name="plantName"><br>
+div.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+div.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+</style>
+</head>
+<?php
+$selectQuery = "SELECT * FROM plants left join store on plants.store_ID = store.store_ID;";
+$result = mysqli_query($conn,$selectQuery);
+$row = mysqli_fetch_assoc($result);
+$species = $row['plant_species'];
+$color = $row['plant_color'];
+$climate_zone = $row['plant_climate_zone'];
+$diffuclty = $row['plant_difficulty'];
+$lighting = $row['plant_light'];
+$water = $row['plant_water'];
+$price = $row['plant_price_range'];
+$size = $row['plant_size'];
+$warning = $row['plant_warning'];
+$store = $row['store_link'];
+?>
+<body>
+<div class="container" style="text-aligned:center;">
+<h1>Plant Catalog</h1>
+    <div class="row">
+        <div class ="column">
+            <div class="gallery">
+            <a target="_blank" href="static/cereus.jpg">
+                <img src="static/cereus.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Cereus</div>
+            <div class="plants_info" style="text-align:left;">
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+            <?php
+        $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/ferocactus.jpg">
+                <img src="static/ferocactus.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Ferocactus</div>
+            <div class="plants_info" style="text-align:left;">
+                
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+<?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/jade.jpg">
+                <img src="static/jade.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Jade</div>
+            <div class="plants_info" style="text-align:left;">
+            
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+<?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/burros_tail.jpg">
+                <img src="static/burros_tail.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Burro's Tail</div>
+            <div class="plants_info" style="text-align:left;">
+            
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+<?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/parlor_palm.jpg">
+                <img src="static/parlor_palm.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Parlor Palm</div>
+            <div class="plants_info" style="text-align:left;">
+            
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
         </div>
 
-        <br><br><br>
-
-        <h1>Choose the plant species:</h1> 
-        <ul class="quiz">
-            <li>
-                <ul class="choices">
-                    <li>
-                        <label
-                            ><input type="radio" name="species" value="Cacti" /><span
-                                >Cacti</span
-                            ></label
-                        >
-                    </li>
-                    <li>
-                        <label
-                            ><input type="radio" name="species" value="Succulent" /><span
-                                >Succulent</span
-                            ></label
-                        >
-                    </li>
-                    <li>
-                        <label
-                            ><input type="radio" name="species" value="Palm" /><span
-                                >Palm</span
-                            ></label
-                        >
-                    </li>
-                    <li>
-                        <label
-                            ><input type="radio" name="species" value="Flowering" /><span
-                                >Flowering</span
-                            ></label
-                        >
-                    </li>
-                    <li>
-                        <label
-                            ><input type="radio" name="species" value="Fern" /><span
-                                >Fern</span
-                            ></label
-                        >
-                    </li>
-                    <li>
-                        <label
-                            ><input type="radio" name="species" value="Common House" /><span
-                                >Common House</span
-                            ></label
-                        >
-                    </li>
-
-                </ul>
-            </li>
-
-            <br><br><br>
-
-
-            <h1>Enter the color of the plant:</h1> 
-        <form method="get" action="results.php">
-            <div class="name">
-            <label for="color">Plant color:</label><br>
-            <input type="text" id="color" name="color"><br>
-        </div>
-
-        <br><br><br>
-
-
-
-        <h1>Choose the plant size:</h1> 
-        <ul class="quiz">
-            <li>
-                <ul class="choices">
-                    <li>
-                        <label
-                            ><input type="radio" name="size" value="XS" /><span
-                                >XS</span
-                            ></label
-                        >
-                    </li>
-                    <li>
-                        <label
-                            ><input type="radio" name="size" value="S" /><span
-                                >S</span
-                            ></label
-                        >
-                    </li>
-                    <li>
-                        <label
-                            ><input type="radio" name="size" value="M" /><span
-                                >M</span
-                            ></label
-                        >
-                    </li>
-                    <li>
-                        <label
-                            ><input type="radio" name="size" value="L" /><span
-                                >L</span
-                            ></label
-                        >
-                    </li>
-
-                </ul>
-            </li>
-
-            <br><br><br>
-
-
-
-
-            <h1>What is the warning for the plant?</h1> 
-            <label for="warning">
-                <select name="warning" id="warning">
-                  <option value="select">Choose the warning</option>
-                  <ul class ="drop" role="menu">
-                  <option value="Safe">Safe</option>
-                  <option value="Posionous Sap">Posionous Sap</option>
-                  <option value="Allergies">Allergies</option>
-                  <option value="Not Pet Safe">Not Pet Safe</option>
-                  <option value="Not Child Safe">Not Child Safe</option>
-                  <option value="Not Pet Safe + Not Child Safe">Not Pet Safe + Not Child Safe</option>
-                  <option value="Not Pet Safe + Not Child Safe + Posionous Sap">Not Pet Safe + Not Child Safe + Posionous Sap</option>
-                  <option value="Not Pet Safe + Not Child Safe + Allergies + Poisonous Sap">Not Pet Safe + Not Child Safe + Allergies + Poisonous Sap</option>
-                </select>
-            </ul>
-
-            <br><br><br>
-
-
-
-            <h1>What kind of lighting does the plant need?</h1>
-            <li>
-                <ul class="choices">
-                    <li>
-                        <label
-                            ><input type="radio" name="sunlight" value="indirect" /><span
-                                >Indirect</span
-                            ></label
-                        >
-                    </li>
-                    <li>
-                        <label
-                            ><input type="radio" name="sunlight" value="direct" /><span
-                                >Direct</span
-                            ></label
-                        >
-                    </li>
-                    <li>
-                        <label
-                            ><input type="radio" name="sunlight" value="shade" /><span
-                                >Shade</span
-                            ></label
-                        >
-                    </li>
-                </ul>
-            </li>
-            <br><br><br>
-
-
-
-
-            <h1>How often do you need to water the plant?</h1>
-
-
-        <h4>(The plant should be watered once every<form action="#">
-            <select name="frequency" id="frequency">
-              <option value="select">___</option>
-              <ul class ="drop" role="menu">
-              <option value=1>1</option>
-              <option value=2>2</option>
-              <option value=3>3</option>
-            </select>
-             week(s).)</h4>
-        </ul>
-      </form>
+        <?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?><div class ="column">
+            <div class="gallery">
+            <a target="_blank" href="static/majesty_palm.png">
+                <img src="static/majesty_palm.png" width="500" height="500">
+            </a>
    
-
-   <br><br>
-
-
-
-
-   <h1>What climate zone should the plant be in?</h1> 
-   <label for="climate">
-       <select name="climate" id="climate">
-         <option value="select">Climate Zone</option>
-         <ul class ="drop" role="menu">
-         <option value="1">1</option>
-         <option value="2">2</option>
-         <option value="3">3</option>
-         <option value="4">4</option>
-         <option value="5">5</option>
-         <option value="6">6</option>
-         <option value="7">7</option>
-       </select>
-   </ul>
-
-   <br><br><br>
-
-
-
-   <h1>How difficult is the plant?</h1>
-   <h2>(1-10)</h2>
-
-   <div class="slider">
-       <input type="range" min="1" max="10" value="5" oninput="rangeValue.innerText = this.value" id = 'difficulty' name = 'difficulty'>
-       <p id="rangeValue">5</p>
-   </div>
-
-   <br><br><br>
-   <br><br><br>
-
-
-
-   <h1>How expensive is the plant?</h1>
-       <h2>(<span style = "color: green">$</span> - less than 20) (<span style = "color: green">$$</span> - between 20-50) (<span style = "color: green">$$$</span> - greater than 50)</h2>
-       <ul class="choices">
-           <li>
-               <label
-                   ><input type="radio" name="cost" value="$" /><span
-                       >$</span
-                   ></label
-               >
-           </li>
-           <li>
-               <label
-                   ><input type="radio" name="cost" value="$$" /><span
-                       >$$</span
-                   ></label
-               >
-           </li>
-           <li>
-               <label
-                   ><input type="radio" name="cost" value="$$$" /><span
-                       >$$$</span
-                   ></label
-               >
-           </li>
-       </ul>
-   </li>
-
-   </ul>
-   <br><br><br>
-
-
-   <h1>Enter the url for the store:</h1> 
-        <form method="get" action="results.php">
-            <div class="name">
-            <label for="fname">Store url:</label><br>
-            <input type="text" id="fname" name="fname"><br>
+            <div class="desc">Majesty Palm</div>
+            <div class="plants_info" style="text-align:left;">
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+<?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/african_violet.jpeg">
+                <img src="static/african_violet.jpeg" width="500" height="500">
+            </a>
+            <div class="desc">African Violet</div>
+            <div class="plants_info" style="text-align:left;">
+            
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+<?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/pink_anthurium.jpg">
+                <img src="static/pink_anthurium.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Pink Anthurium</div>
+            <div class="plants_info" style="text-align:left;">
+            
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+<?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/delphinium.jpg">
+                <img src="static/delphinium.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Delphinium</div>
+            <div class="plants_info" style="text-align:left;">
+            
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+<?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/staghorn.jpg">
+                <img src="static/staghorn.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Staghorn Fern</div>
+            <div class="plants_info" style="text-align:left;">
+            
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
         </div>
 
-        <br><br><br>
+        <?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?><div class ="column">
+            <div class="gallery">
+            <a target="_blank" href="static/alocasia.jpg">
+                <img src="static/alocasia.jpg" width="500" height="500">
+            </a>
+   
+            <div class="desc">Alocasia</div>
+            <div class="plants_info" style="text-align:left;">
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+<?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/monstera.jpg">
+                <img src="static/monstera.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Monstera</div>
+            <div class="plants_info" style="text-align:left;">
+            
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+<?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/pothos.jpg">
+                <img src="static/pothos.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Philodendron Pothos</div>
+            <div class="plants_info" style="text-align:left;">
+            
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+<?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/fiddle_leaf.jpg">
+                <img src="static/fiddle_leaf.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Fiddle Leaf Fig</div>
+            <div class="plants_info" style="text-align:left;">
+            
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+<?php
+            $row = mysqli_fetch_assoc($result);
+        $species = $row['plant_species'];
+        $color = $row['plant_color'];
+        $climate_zone = $row['plant_climate_zone'];
+        $diffuclty = $row['plant_difficulty'];
+        $lighting = $row['plant_light'];
+        $water = $row['plant_water'];
+        $price = $row['plant_price_range'];
+        $size = $row['plant_size'];
+        $warning = $row['plant_warning'];
+        $store = $row['store_link'];
+        ?>
+            <div class="gallery">
+            <a target="_blank" href="static/pilea.jpg">
+                <img src="static/pilea.jpg" width="500" height="500">
+            </a>
+            <div class="desc">Pilea Pepermoidies</div>
+            <div class="plants_info" style="text-align:left;">
+            
+                <h3>Species: <?php echo $species; ?></h3>
+                <h3>Color: <?php echo $color; ?></h3>
+                <h3>Difficulty: <?php echo $diffuclty; ?></h3>
+                <h3>Lighting:<?php echo $lighting; ?> </h3>
+                <h3>Water: <?php echo $water; ?> </h3>
+                <h3>Price Range:<?php echo $price; ?> </h3>
+                <h3>Size:<?php echo $size; ?> </h3>
+                <h3>Warnings: <?php echo $warning; ?></h3>
+                <h3>Store Link: <?php echo $store; ?></h3>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+</body>
 
-
-        <a href = 'admin_menu.php'>
-    <input type="submit" value="Enter The Plant"/>
-</a>
-</form>
-</center>
-
-
-    <br><br>
-    
-
-
-        </main>
-  </body>
 </html>
