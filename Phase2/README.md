@@ -13,17 +13,16 @@ We will be creating a program that addresses all these factors in choosing the p
 ## Entity-relationship Diagram
 ![ER Diagram](ERD_P1.jpeg)
 
-
 # Lessons Learned
 * Start project earlier
 * Have reoccurring meetings weekly/bi-weekly
-
+* Store notes from reoccuring meetings 
+* It was good to come up with tasks to have done by the next meeting
 
 # How The Semester Project Can Be Improved
 * 
 
-
 # Web Application Link: 
-
+![https://www.cmsc508.com/202310/team11/PlantApp/](https://www.cmsc508.com/202310/team11/PlantApp/)
 
 # Presentation Video Link:
